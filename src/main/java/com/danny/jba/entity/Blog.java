@@ -10,6 +10,8 @@ import javax.validation.constraints.Size;
 import java.util.ArrayList;
 import java.util.List;
 
+@SuppressWarnings("JpaDataSourceORMInspection")
+
 @Setter
 @Getter
 @NoArgsConstructor

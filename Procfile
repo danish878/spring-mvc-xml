@@ -1,0 +1,1 @@
+web: java -jar target/java-blog-aggregator-1.0-SNAPSHOT.war

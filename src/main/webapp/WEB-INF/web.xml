@@ -77,4 +77,10 @@
         <param-name>defaultHtmlEscape</param-name>
         <param-value>true</param-value>
     </context-param>
+
+    <!--Make PROD profile active-->
+    <context-param>
+        <param-name>spring.profiles.default</param-name>
+        <param-value>prod</param-value>
+    </context-param>
 </web-app>

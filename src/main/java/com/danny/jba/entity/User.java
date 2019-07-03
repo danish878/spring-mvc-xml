@@ -11,11 +11,14 @@ import javax.validation.constraints.Size;
 import java.util.ArrayList;
 import java.util.List;
 
+@SuppressWarnings("JpaDataSourceORMInspection")
+
 @Setter
 @Getter
 @NoArgsConstructor
 
 @Entity
+@Table(name = "app_user")
 public class User {
 
     @Id
