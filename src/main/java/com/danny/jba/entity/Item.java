@@ -24,7 +24,6 @@ public class Item {
     private String title;
 
     @Lob
-//    @Type(type = "org.hibernate.type.StringClobType") // works for PostGre but check if this property needs to change for other databases
     @Column(length = Integer.MAX_VALUE)
     private String description;
 

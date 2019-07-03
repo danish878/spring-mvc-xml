@@ -17,43 +17,43 @@ $(document).ready(function () {
     });
 
     //register jquery validate plugin for user registration form
-    $(".registrationForm").validate({
-        rules: {
-            name: {
-                required: true,
-                minlength: 3,
-                remote: {
-                    url: "/java_blog_aggregator/register/available.html",
-                    type: "GET",
-                    data: {
-                        username: function() {
-                            return $("#name").val();
-                        }
-                    }
-                }
-            },
-            email: {
-                required: true,
-                email: true
-            },
-            password: {
-                required: true,
-                minlength: 5
-            },
-            confirm_password: {
-                required: true,
-                minlength: 5,
-                equalTo: "#password"
-            }
-        },
-        messages: {
-            name: {
-                remote: "Username already exists!"
-            }
-        },
-        errorClass: "is-invalid",
-        validClass: "is-valid"
-    });
+    // $(".registrationForm").validate({
+    //     rules: {
+    //         name: {
+    //             required: true,
+    //             minlength: 3,
+    //             remote: {
+    //                 url: "/java_blog_aggregator/register/available.html",
+    //                 type: "GET",
+    //                 data: {
+    //                     username: function() {
+    //                         return $("#name").val();
+    //                     }
+    //                 }
+    //             }
+    //         },
+    //         email: {
+    //             required: true,
+    //             email: true
+    //         },
+    //         password: {
+    //             required: true,
+    //             minlength: 5
+    //         },
+    //         confirm_password: {
+    //             required: true,
+    //             minlength: 5,
+    //             equalTo: "#password"
+    //         }
+    //     },
+    //     messages: {
+    //         name: {
+    //             remote: "Username already exists!"
+    //         }
+    //     },
+    //     errorClass: "is-invalid",
+    //     validClass: "is-valid"
+    // });
 
     $(".addBlogForm").validate(
         {

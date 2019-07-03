@@ -13,7 +13,7 @@
 <%--<form:form commandName="user" cssClass="form-horizontal">--%>
 <form:form modelAttribute="user" cssClass="form-horizontal registrationForm">
 
-    <c:if test="${param.success eq true}">
+    <c:if test="${success eq true}">
         <div class="alert alert-success">Registration successful!</div>
     </c:if>
 
@@ -51,3 +51,48 @@
     </div>
     <input type="hidden" id="ajaxUrl" value='<spring:url value="/register/available.html" />' />
 </form:form>
+
+<script>
+    $(document).ready(function () {
+
+        //register jquery validate plugin for user registration form
+        $(".registrationForm").validate({
+            rules: {
+                name: {
+                    required: true,
+                    minlength: 3,
+                    remote: {
+                        url: "<spring:url value="/register/available.html" />",
+                        type: "GET",
+                        data: {
+                            username: function() {
+                                return $("#name").val();
+                            }
+                        }
+                    }
+                },
+                email: {
+                    required: true,
+                    email: true
+                },
+                password: {
+                    required: true,
+                    minlength: 5
+                },
+                confirm_password: {
+                    required: true,
+                    minlength: 5,
+                    equalTo: "#password"
+                }
+            },
+            messages: {
+                name: {
+                    remote: "Username already exists!"
+                }
+            },
+            errorClass: "is-invalid",
+            validClass: "is-valid"
+        });
+
+    });
+</script>
