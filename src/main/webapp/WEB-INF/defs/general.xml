@@ -42,4 +42,10 @@
         <put-attribute name="body" value="/WEB-INF/jsp/login.jsp" />
         <put-attribute name="current" value="login" />
     </definition>
+
+    <definition name="email" extends="common">
+        <put-attribute name="title" value="Test Email" />
+        <put-attribute name="body" value="/WEB-INF/jsp/email.jsp" />
+        <put-attribute name="current" value="email" />
+    </definition>
 </tiles-definitions>

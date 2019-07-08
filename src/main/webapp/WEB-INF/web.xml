@@ -19,7 +19,7 @@
     <servlet-mapping>
         <servlet-name>dispatcher</servlet-name>
         <url-pattern>/</url-pattern>
-        <url-pattern>*.html</url-pattern>
+<!--        <url-pattern>*.html</url-pattern>-->
     </servlet-mapping>
 
     <!--This listener searches for the file 'applicationContext.xml'-->

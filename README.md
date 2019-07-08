@@ -1,3 +1,5 @@
+[![CircleCI](https://circleci.com/gh/danish878/spring-mvc-xml.svg?style=svg)](https://circleci.com/gh/danish878/spring-mvc-xml)
+
 # Java Blog Aggregator
 
 ##To run in development mode (using embedded HSQL database)

@@ -66,7 +66,7 @@ public class BlogService {
         return blog.orElse(null);
     }
 
-    @PreAuthorize("#blog.user.name == authentication.name OR hasRole('ROLE_ADMINN')")
+    @PreAuthorize("#blog.user.name == authentication.name OR hasRole('ROLE_ADMIN')")
     public void delete(@P("blog") Blog blog) {
         blogRepository.delete(blog);
     }

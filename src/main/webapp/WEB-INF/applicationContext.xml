@@ -2,7 +2,6 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:context="http://www.springframework.org/schema/context"
-       xmlns:jdbc="http://www.springframework.org/schema/jdbc"
        xmlns:tx="http://www.springframework.org/schema/tx"
        xmlns:jpa="http://www.springframework.org/schema/data/jpa"
        xmlns:task="http://www.springframework.org/schema/task"
@@ -10,36 +9,70 @@
        http://www.springframework.org/schema/beans/spring-beans.xsd
        http://www.springframework.org/schema/context
        https://www.springframework.org/schema/context/spring-context.xsd 
-       http://www.springframework.org/schema/jdbc 
-       http://www.springframework.org/schema/jdbc/spring-jdbc.xsd 
-       http://www.springframework.org/schema/tx 
+       http://www.springframework.org/schema/tx
        http://www.springframework.org/schema/tx/spring-tx.xsd
        http://www.springframework.org/schema/data/jpa
        http://www.springframework.org/schema/data/jpa/spring-jpa.xsd
        http://www.springframework.org/schema/task
        http://www.springframework.org/schema/task/spring-task.xsd">
 
+    <!--@ComponentScan-->
     <context:component-scan base-package="com.danny.jba">
         <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
     </context:component-scan>
 
-    <tx:annotation-driven />
+<!--    @EnableTransactionManagement-->
+    <tx:annotation-driven/>
 
     <bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
-        <property name="dataSource" ref="dataSource" />
+        <property name="dataSource" ref="dataSource"/>
     </bean>
-    
-    <jpa:repositories base-package="com.danny.jba.repository" />
 
-    <import resource="security.xml" />
 
-    <task:annotation-driven />
+    <!--JavaMailSender Bean Config-->
+    <!--https://accounts.google.com/b/0/DisplayUnlockCaptcha-->
+    <!--https://www.google.com/settings/security/lesssecureapps-->
+    <bean id="javaMailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
+        <property name="host" value="smtp.gmail.com" />
+        <property name="port" value="587" />
+        <property name="username" value="mohamad.aslam.0864@gmail.com" />
+        <property name="password" value="totha_saleem@878" />
+
+        <property name="javaMailProperties">
+            <props>
+                <prop key="mail.transport.protocol">smtp</prop>
+                <prop key="mail.smtp.auth">true</prop>
+                <prop key="mail.smtp.socketFactory.port">465</prop>
+                <prop key="mail.smtp.socketFactory.class">javax.net.ssl.SSLSocketFactory</prop>
+                <prop key="mail.smtp.socketFactory.fallback">false</prop>
+                <prop key="mail.smtp.starttls.enable">true</prop>
+                <prop key="mail.debug">true</prop>
+            </props>
+        </property>
+    </bean>
+
+
+    <!--@EnableJpaRepositories("some.root.package")-->
+    <jpa:repositories base-package="com.danny.jba.repository"/>
+
+
+    <!--@EnableWebSecurity-->
+    <import resource="security.xml"/>
+
+
+    <!--@EnableScheduling and @EnableAsync in java config-->
+    <task:annotation-driven/>
+
 
     <beans profile="dev">
-        <import resource="database-dev.xml" />
+        <import resource="database-dev.xml"/>
+    </beans>
+
+    <beans profile="test">
+        <import resource="database-test.xml"/>
     </beans>
 
     <beans profile="prod">
-        <import resource="database-prod.xml" />
+        <import resource="database-prod.xml"/>
     </beans>
 </beans>
