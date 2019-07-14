@@ -7,7 +7,7 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" %>
 
-<%@include file="../layout/taglib.jsp"%>
+<%@include file="../layout/taglib.jsp" %>
 
 <table class="table table-bordered table-hover table-striped">
     <thead>
@@ -21,7 +21,7 @@
             <tr>
                 <td>
                     <a href='<spring:url value="/users/${user.id}.html" />'>
-                        <c:out value="${user.name}" /> <!--c:out from JSTL is used to escape html entities-->
+                        <c:out value="${user.name}"/> <!--c:out from JSTL is used to escape html entities-->
                     </a>
                 </td>
                 <td>

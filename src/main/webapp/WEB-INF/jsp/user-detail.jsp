@@ -29,7 +29,7 @@
     <c:forEach items="${user.blogs}" var="blog">
         <div class="tab-pane fade" id="blog_${blog.id}" role="tabpanel" aria-labelledby="blog_${blog.id}-tab">
             <h1>
-                ${blog.name}
+                    ${blog.name}
                 <a href='<spring:url value="/blog/remove/${blog.id}.html" />'
                    class="btn btn-danger triggerRemoveBlog">Remove Blog</a>
             </h1>

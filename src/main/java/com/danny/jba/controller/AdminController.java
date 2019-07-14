@@ -23,7 +23,7 @@ public class AdminController {
     }
 
     @GetMapping("/users/{id}")
-    public String userDetail(@PathVariable int id, Model model){
+    public String userDetail(@PathVariable int id, Model model) {
         model.addAttribute("user", userService.findByIdWithBlogs(id));
         return "user-detail";
     }

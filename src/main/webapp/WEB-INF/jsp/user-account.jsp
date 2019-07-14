@@ -29,14 +29,14 @@
                         <label for="name" class="col-sm-2 control-label">Name:</label>
                         <div class="col-sm-10">
                             <form:input path="name" cssClass="form-control"/>
-                            <form:errors path="name" cssClass="error" />
+                            <form:errors path="name" cssClass="error"/>
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="url" class="col-sm-2 control-label">URL:</label>
                         <div class="col-sm-10">
                             <form:input path="url" cssClass="form-control"/>
-                            <form:errors path="url" cssClass="error" />
+                            <form:errors path="url" cssClass="error"/>
                         </div>
                     </div>
 
@@ -69,7 +69,7 @@
     <c:forEach items="${user.blogs}" var="blog">
         <div class="tab-pane fade" id="blog_${blog.id}" role="tabpanel" aria-labelledby="blog_${blog.id}-tab">
             <h1>
-                ${blog.name}
+                    ${blog.name}
                 <a href='<spring:url value="/blog/remove/${blog.id}.html" />'
                    class="btn btn-danger triggerRemoveBlog">Remove Blog</a>
             </h1>
@@ -89,11 +89,11 @@
                             <td>
                                 <strong>
                                     <a href='<c:out value="${item.link}" />' target="_blank">
-                                        <c:out value="${item.title}" />
+                                        <c:out value="${item.title}"/>
                                     </a>
                                 </strong>
-                                <br />
-                                <c:out value="${item.description}" />
+                                <br/>
+                                <c:out value="${item.description}"/>
                             </td>
                         </tr>
                     </c:forEach>

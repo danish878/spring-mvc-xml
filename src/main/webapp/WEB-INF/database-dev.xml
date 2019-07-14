@@ -10,16 +10,17 @@
     <jdbc:embedded-database id="dataSource" type="HSQL"/>
 
     <bean class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean" id="entityManagerFactory">
-        <property name="packagesToScan" value="com.danny.jba.entity" />
-        <property name="dataSource" ref="dataSource" />
+        <property name="packagesToScan" value="com.danny.jba.entity"/>
+        <property name="dataSource" ref="dataSource"/>
         <property name="jpaProperties">
             <props>
                 <prop key="hibernate.show_sql">true</prop>
                 <prop key="hibernate.hbm2ddl.auto">create</prop>
+                <prop key="hibernate.dialect">org.hibernate.dialect.HSQLDialect</prop>
             </props>
         </property>
         <property name="persistenceProvider">
-            <bean class="org.hibernate.jpa.HibernatePersistenceProvider" />
+            <bean class="org.hibernate.jpa.HibernatePersistenceProvider"/>
         </property>
     </bean>
 

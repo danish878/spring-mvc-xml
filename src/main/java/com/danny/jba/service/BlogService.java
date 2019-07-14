@@ -30,7 +30,7 @@ public class BlogService {
 
     // 1hour = 60 seconds * 60 minutes * 1000 milliseconds
     @Scheduled(fixedDelay = 3600000)
-    public void reloadBlogs(){
+    public void reloadBlogs() {
         List<Blog> blogs = blogRepository.findAll();
         blogs.forEach(this::saveItems);
     }

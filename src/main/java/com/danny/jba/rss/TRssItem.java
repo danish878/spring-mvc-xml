@@ -12,16 +12,17 @@ import javax.xml.bind.annotation.XmlAnyElement;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.namespace.QName;
+
 import org.w3c.dom.Element;
 
 
 /**
  * An item may represent a "story" -- much like a story in a newspaper or magazine; if so its description is a synopsis of the story, and the link points to the full story. An item may also be complete in itself, if so, the description contains the text (entity-encoded HTML is allowed), and the link and title may be omitted.
- * 
+ *
  * <p>Java class for tRssItem complex type.
- * 
+ *
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ *
  * <pre>
  * &lt;complexType name="tRssItem">
  *   &lt;complexContent>
@@ -43,21 +44,19 @@ import org.w3c.dom.Element;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "tRssItem", propOrder = {
-    "title",
-    "description",
-    "link",
-    "category",
-    "comments",
-    "enclosure",
-    "guid",
-    "pubDate",
-    "source",
-    "any"
+        "title",
+        "description",
+        "link",
+        "category",
+        "comments",
+        "enclosure",
+        "guid",
+        "pubDate",
+        "source",
+        "any"
 })
 public class TRssItem {
 
@@ -79,11 +78,9 @@ public class TRssItem {
 
     /**
      * Gets the value of the title property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getTitle() {
         return title;
@@ -91,11 +88,9 @@ public class TRssItem {
 
     /**
      * Sets the value of the title property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setTitle(String value) {
         this.title = value;
@@ -103,11 +98,9 @@ public class TRssItem {
 
     /**
      * Gets the value of the description property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getDescription() {
         return description;
@@ -115,11 +108,9 @@ public class TRssItem {
 
     /**
      * Sets the value of the description property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setDescription(String value) {
         this.description = value;
@@ -127,11 +118,9 @@ public class TRssItem {
 
     /**
      * Gets the value of the link property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getLink() {
         return link;
@@ -139,11 +128,9 @@ public class TRssItem {
 
     /**
      * Sets the value of the link property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setLink(String value) {
         this.link = value;
@@ -151,11 +138,9 @@ public class TRssItem {
 
     /**
      * Gets the value of the category property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link TCategory }
-     *     
+     *
+     * @return possible object is
+     * {@link TCategory }
      */
     public TCategory getCategory() {
         return category;
@@ -163,11 +148,9 @@ public class TRssItem {
 
     /**
      * Sets the value of the category property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link TCategory }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link TCategory }
      */
     public void setCategory(TCategory value) {
         this.category = value;
@@ -175,11 +158,9 @@ public class TRssItem {
 
     /**
      * Gets the value of the comments property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getComments() {
         return comments;
@@ -187,11 +168,9 @@ public class TRssItem {
 
     /**
      * Sets the value of the comments property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setComments(String value) {
         this.comments = value;
@@ -199,11 +178,9 @@ public class TRssItem {
 
     /**
      * Gets the value of the enclosure property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link TEnclosure }
-     *     
+     *
+     * @return possible object is
+     * {@link TEnclosure }
      */
     public TEnclosure getEnclosure() {
         return enclosure;
@@ -211,11 +188,9 @@ public class TRssItem {
 
     /**
      * Sets the value of the enclosure property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link TEnclosure }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link TEnclosure }
      */
     public void setEnclosure(TEnclosure value) {
         this.enclosure = value;
@@ -223,11 +198,9 @@ public class TRssItem {
 
     /**
      * Gets the value of the guid property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link TGuid }
-     *     
+     *
+     * @return possible object is
+     * {@link TGuid }
      */
     public TGuid getGuid() {
         return guid;
@@ -235,11 +208,9 @@ public class TRssItem {
 
     /**
      * Sets the value of the guid property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link TGuid }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link TGuid }
      */
     public void setGuid(TGuid value) {
         this.guid = value;
@@ -247,11 +218,9 @@ public class TRssItem {
 
     /**
      * Gets the value of the pubDate property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getPubDate() {
         return pubDate;
@@ -259,11 +228,9 @@ public class TRssItem {
 
     /**
      * Sets the value of the pubDate property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setPubDate(String value) {
         this.pubDate = value;
@@ -271,11 +238,9 @@ public class TRssItem {
 
     /**
      * Gets the value of the source property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link TSource }
-     *     
+     *
+     * @return possible object is
+     * {@link TSource }
      */
     public TSource getSource() {
         return source;
@@ -283,11 +248,9 @@ public class TRssItem {
 
     /**
      * Sets the value of the source property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link TSource }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link TSource }
      */
     public void setSource(TSource value) {
         this.source = value;
@@ -295,26 +258,24 @@ public class TRssItem {
 
     /**
      * Gets the value of the any property.
-     * 
+     *
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the any property.
-     * 
+     *
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getAny().add(newItem);
      * </pre>
-     * 
-     * 
+     *
+     *
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link Element }
      * {@link Object }
-     * 
-     * 
      */
     public List<Object> getAny() {
         if (any == null) {
@@ -325,17 +286,15 @@ public class TRssItem {
 
     /**
      * Gets a map that contains attributes that aren't bound to any typed property on this class.
-     * 
+     *
      * <p>
-     * the map is keyed by the name of the attribute and 
+     * the map is keyed by the name of the attribute and
      * the value is the string value of the attribute.
-     * 
+     * <p>
      * the map returned by this method is live, and you can add new attribute
      * by updating the map directly. Because of this design, there's no setter.
-     * 
-     * 
-     * @return
-     *     always non-null
+     *
+     * @return always non-null
      */
     public Map<QName, String> getOtherAttributes() {
         return otherAttributes;

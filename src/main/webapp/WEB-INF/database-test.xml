@@ -1,22 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xmlns:jdbc="http://www.springframework.org/schema/jdbc"
+       xmlns:jee="http://www.springframework.org/schema/jee"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
        http://www.springframework.org/schema/beans/spring-beans.xsd
-       http://www.springframework.org/schema/jdbc
-       http://www.springframework.org/schema/jdbc/spring-jdbc.xsd">
+       http://www.springframework.org/schema/jee
+       http://www.springframework.org/schema/jee/spring-jee.xsd">
 
-    <bean id="dataSource" class="org.apache.commons.dbcp2.BasicDataSource">
-        <property name="driverClassName" value="org.postgresql.Driver" />
-        <property name="url" value="jdbc:postgresql://localhost:5432/blog_aggregator" />
-        <property name="username" value="postgres" />
-        <property name="password" value="elephant_59" />
+    <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property name="locations">
+            <list>
+                <value>classpath:jpa.properties</value>
+            </list>
+        </property>
+        <property name="ignoreUnresolvablePlaceholders" value="true"/>
     </bean>
 
+    <!--<bean id="dataSource" class="org.apache.commons.dbcp2.BasicDataSource">
+        <property name="driverClassName" value="org.postgresql.Driver"/>
+        <property name="url" value="jdbc:postgresql://localhost:5432/blog_aggregator"/>
+        <property name="username" value="postgres"/>
+        <property name="password" value="elephant_59"/>
+    </bean>-->
+<!--    <bean id="dataSource" class="org.apache.commons.dbcp2.BasicDataSource">-->
+<!--        <property name="driverClassName" value="${spring.datasource.driver-class-name}"/>-->
+<!--        <property name="url" value="${spring.datasource.url}"/>-->
+<!--        <property name="username" value="${spring.datasource.username}"/>-->
+<!--        <property name="password" value="${spring.datasource.password}"/>-->
+<!--    </bean>-->
+
+    <jee:jndi-lookup id="dataSource"
+                     jndi-name="jdbc/DannyDatabase"
+                     expected-type="javax.sql.DataSource" />
+
     <bean class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean" id="entityManagerFactory">
-        <property name="packagesToScan" value="com.danny.jba.entity" />
-        <property name="dataSource" ref="dataSource" />
+        <property name="packagesToScan" value="com.danny.jba.entity"/>
+        <property name="dataSource" ref="dataSource"/>
         <property name="jpaProperties">
             <props>
                 <prop key="hibernate.show_sql">true</prop>
@@ -26,7 +45,7 @@
             </props>
         </property>
         <property name="persistenceProvider">
-            <bean class="org.hibernate.jpa.HibernatePersistenceProvider" />
+            <bean class="org.hibernate.jpa.HibernatePersistenceProvider"/>
         </property>
     </bean>
 

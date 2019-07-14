@@ -8,7 +8,7 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * <p>Java class for tCloudProtocol.
- * 
+ *
  * <p>The following schema fragment specifies the expected content contained within this class.
  * <p>
  * <pre>
@@ -20,7 +20,6 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/restriction>
  * &lt;/simpleType>
  * </pre>
- * 
  */
 @XmlType(name = "tCloudProtocol")
 @XmlEnum
@@ -43,7 +42,7 @@ public enum TCloudProtocol {
     }
 
     public static TCloudProtocol fromValue(String v) {
-        for (TCloudProtocol c: TCloudProtocol.values()) {
+        for (TCloudProtocol c : TCloudProtocol.values()) {
             if (c.value.equals(v)) {
                 return c;
             }

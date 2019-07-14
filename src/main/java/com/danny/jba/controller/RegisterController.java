@@ -19,19 +19,19 @@ public class RegisterController {
     private UserService userService;
 
     @ModelAttribute("user")
-    public User constructUser(){
+    public User constructUser() {
         return new User();
     }
 
     @GetMapping
-    public String showRegistrer(){
+    public String showRegistrer() {
         return "user-register";
     }
 
     @PostMapping
     public String doRegister(@Valid @ModelAttribute("user") User user, BindingResult result,
                              RedirectAttributes redirectAttributes) {
-        if(result.hasErrors())
+        if (result.hasErrors())
             return showRegistrer();
 
         userService.save(user);

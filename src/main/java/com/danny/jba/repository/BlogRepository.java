@@ -7,7 +7,7 @@ import com.danny.jba.entity.Blog;
 
 import java.util.List;
 
-public interface BlogRepository extends JpaRepository<Blog, Integer>{
+public interface BlogRepository extends JpaRepository<Blog, Integer> {
 
     List<Blog> findByUser(User user);
 }

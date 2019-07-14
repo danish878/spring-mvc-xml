@@ -6,7 +6,7 @@ import com.danny.jba.entity.User;
 
 import java.util.Optional;
 
-public interface UserRepository extends JpaRepository<User, Integer>{
+public interface UserRepository extends JpaRepository<User, Integer> {
 
     User findByName(String name);
 }

@@ -1,45 +1,46 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><entities>
-	<entity>
-		<entity-name>com.danny.jba.entity.Blog</entity-name>
-		<entity-width>120</entity-width>
-		<entity-height>186</entity-height>
-		<entity-X-Coordinate>410</entity-X-Coordinate>
-		<entity-Y-Coordinate>356</entity-Y-Coordinate>
-		<primary-collapsed>false</primary-collapsed>
-		<relation-collapsed>false</relation-collapsed>
-		<basic-collapsed>false</basic-collapsed>
-	</entity>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entities>
+    <entity>
+        <entity-name>com.danny.jba.entity.Blog</entity-name>
+        <entity-width>120</entity-width>
+        <entity-height>186</entity-height>
+        <entity-X-Coordinate>410</entity-X-Coordinate>
+        <entity-Y-Coordinate>356</entity-Y-Coordinate>
+        <primary-collapsed>false</primary-collapsed>
+        <relation-collapsed>false</relation-collapsed>
+        <basic-collapsed>false</basic-collapsed>
+    </entity>
 
-	<entity>
-		<entity-name>com.danny.jba.entity.Item</entity-name>
-		<entity-width>120</entity-width>
-		<entity-height>206</entity-height>
-		<entity-X-Coordinate>640</entity-X-Coordinate>
-		<entity-Y-Coordinate>239</entity-Y-Coordinate>
-		<primary-collapsed>false</primary-collapsed>
-		<relation-collapsed>false</relation-collapsed>
-		<basic-collapsed>false</basic-collapsed>
-	</entity>
+    <entity>
+        <entity-name>com.danny.jba.entity.Item</entity-name>
+        <entity-width>120</entity-width>
+        <entity-height>206</entity-height>
+        <entity-X-Coordinate>640</entity-X-Coordinate>
+        <entity-Y-Coordinate>239</entity-Y-Coordinate>
+        <primary-collapsed>false</primary-collapsed>
+        <relation-collapsed>false</relation-collapsed>
+        <basic-collapsed>false</basic-collapsed>
+    </entity>
 
-	<entity>
-		<entity-name>com.danny.jba.entity.Role</entity-name>
-		<entity-width>120</entity-width>
-		<entity-height>146</entity-height>
-		<entity-X-Coordinate>520</entity-X-Coordinate>
-		<entity-Y-Coordinate>28</entity-Y-Coordinate>
-		<primary-collapsed>false</primary-collapsed>
-		<relation-collapsed>false</relation-collapsed>
-		<basic-collapsed>false</basic-collapsed>
-	</entity>
+    <entity>
+        <entity-name>com.danny.jba.entity.Role</entity-name>
+        <entity-width>120</entity-width>
+        <entity-height>146</entity-height>
+        <entity-X-Coordinate>520</entity-X-Coordinate>
+        <entity-Y-Coordinate>28</entity-Y-Coordinate>
+        <primary-collapsed>false</primary-collapsed>
+        <relation-collapsed>false</relation-collapsed>
+        <basic-collapsed>false</basic-collapsed>
+    </entity>
 
-	<entity>
-		<entity-name>com.danny.jba.entity.User</entity-name>
-		<entity-width>120</entity-width>
-		<entity-height>206</entity-height>
-		<entity-X-Coordinate>170</entity-X-Coordinate>
-		<entity-Y-Coordinate>28</entity-Y-Coordinate>
-		<primary-collapsed>false</primary-collapsed>
-		<relation-collapsed>false</relation-collapsed>
-		<basic-collapsed>false</basic-collapsed>
-	</entity>
+    <entity>
+        <entity-name>com.danny.jba.entity.User</entity-name>
+        <entity-width>120</entity-width>
+        <entity-height>206</entity-height>
+        <entity-X-Coordinate>170</entity-X-Coordinate>
+        <entity-Y-Coordinate>28</entity-Y-Coordinate>
+        <primary-collapsed>false</primary-collapsed>
+        <relation-collapsed>false</relation-collapsed>
+        <basic-collapsed>false</basic-collapsed>
+    </entity>
 </entities>

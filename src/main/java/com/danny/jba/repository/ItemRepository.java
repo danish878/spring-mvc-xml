@@ -8,7 +8,7 @@ import com.danny.jba.entity.Item;
 
 import java.util.List;
 
-public interface ItemRepository extends JpaRepository<Item, Integer>{
+public interface ItemRepository extends JpaRepository<Item, Integer> {
 
     List<Item> findByBlog(Blog blog, Pageable pageable);
 

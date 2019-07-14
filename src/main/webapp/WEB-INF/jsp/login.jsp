@@ -7,26 +7,27 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
-<%@include file="../layout/taglib.jsp"%>
+<%@include file="../layout/taglib.jsp" %>
 
 <div class="container">
     <div class="row">
         <div class="col-md-6 offset-md-3">
             <form:form class="form-signin" method="post" action='${pageContext.request.contextPath}/login'>
                 <%--    <form class="form-signin" method="post" action='<spring:url value="/login" />'>--%>
-                <h2 class="form-signin-heading text-center">SIGN IN</h2>
+                <h2 class="form-signin-heading text-center"><spring:message code="label.welcome"/></h2>
                 <p>
-                    <label for="username" class="sr-only">Username</label>
-                    <input type="text" id="username" name="username" class="form-control" placeholder="Username" required=""
+                    <label for="username" class="sr-only"></label>
+                    <input type="text" id="username" name="username" class="form-control" placeholder="<spring:message code="label.username"/>"
+                           required=""
                            autofocus="">
                 </p>
                 <p>
-                    <label for="password" class="sr-only">Password</label>
-                    <input type="password" id="password" name="password" class="form-control" placeholder="Password"
+                    <label for="password" class="sr-only"></label>
+                    <input type="password" id="password" name="password" class="form-control" placeholder="<spring:message code="label.password"/>"
                            required="">
                 </p>
-                <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
-                <%--        <input type="hidden" name="_csrf" value="${_csrf.token}"/>--%>
+                <button class="btn btn-lg btn-primary btn-block" type="submit"><spring:message code="label.submit"/></button>
+                <%--                        <input type="hidden" name="_csrf" value="${_csrf.token}"/>--%>
                 <%--    </form>--%>
             </form:form>
         </div>
